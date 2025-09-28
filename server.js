@@ -1,6 +1,7 @@
 const express = require("express"); //bring in express
 const app = express(); //create an "app" object
 const port = 3000; //define a port
+let stories = []; //array to hold stories
 
 app.use(express.static("public"));
 
@@ -20,10 +21,18 @@ app.get("/create-mad-libs", (req, res) => {
   console.log("verb: ", verb);
   console.log("Adjective 2: ", adj2);
   console.log("noun 2: ", noun2);
-
+  
   //create the story
   const story = `One lovely day ${name} had a ${adj1} ${noun} that loved to ${verb}. One day ${name} stumbles upon a ${adj2} ${noun2}, and everything changed! `;
- 
+  
+  //save the story to the array
+  stories.push(story); // add a new story to the array
+  
+  // array operations
+  console.log("stories array: ", stories) // log the entire array
+  console.log("Number of Stories saved", stories.length) // check the length of the array
+  console.log("First story in the array: ", stories[0]) // access the first story in the array
+  
   //send only happens once, it ends the response and this is what goes back to the client 
   res.send(`
   <!DOCTYPE html>
