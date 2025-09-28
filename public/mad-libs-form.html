@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mad Libs Form</title>
+    <link
+      rel="stylesheet"
+      href="
+    https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .card {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+    </style>
+  </head>
+  <body>
+
+<div class="card">
+    <h1>Welcome to Mad Libs!</h1>
+    <form action="/create-mad-libs" method="GET" class="mx-auto" style="width: 200px;">
+      <div class="form-group mb-3">
+        <label for="name" class="form-label fw-bold">Name: </label>
+        <input type="text" name="name" id="" class="form-control border border-dark" placeholder="e.g., Alex" required  />
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="name" class="form-label fw-bold">Adjective 1: </label>
+        <input type="text" name="adjective1" id="adjective1" class="form-control border border-dark" placeholder="e.g., sleepy" required />
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="noun1" class="form-label fw-bold">Noun 1: </label>
+        <input type="text" name="noun1" id="noun1" class="form-control border border-dark" placeholder="e.g., cat" required  />
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="verb" class="form-label fw-bold">Verb: </label>
+        <input type="text" name="verb" id="verb" class="form-control border border-dark" placeholder="e.g., jump" required  />
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="adjective1" class="form-label fw-bold">Adjective 2: </label>
+        <input type="text" name="adjective2" id="adjective2" class="form-control border border-dark" placeholder="e.g., sparkling" required />
+      </div>
+
+ <div class="form-group mb-3">
+        <label for="n" class="form-label fw-bold">Noun 2: </label>
+        <input type="text" name="noun2" id="noun2" class="form-control border border-dark" placeholder="e.g., spaceship" required  />
+    </div>
+
+    <button type="submit" class="m-1 bg-primary border border-2">SUBMIT</button>
+    </form>
+    </div>
+
+
+  </body>
+</html>
